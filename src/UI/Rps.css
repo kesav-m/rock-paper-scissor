@@ -1,0 +1,52 @@
+.image {
+  position: relative;
+}
+.eff {
+  animation: mymove 2s;
+}
+.recbox {
+  width: 140px;
+  height: 140px;
+}
+.relimage {
+  position: relative;
+  transition: 0.5s;
+  bottom: 120px;
+  right: 200px;
+}
+.absimage {
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0;
+}
+.absimage:nth-child(1) {
+  opacity: 1;
+}
+.relimage:hover .absimage:nth-child(4) {
+  transform: translateX(300px);
+  opacity: 1;
+}
+
+.relimage:hover .absimage:nth-child(3) {
+  transform: translateX(200px);
+  opacity: 1;
+}
+
+.relimage:hover .absimage:nth-child(2) {
+  transform: translateX(100px);
+  opacity: 1;
+}
+
+.mb100 {
+  margin-bottom: 100px;
+}
+
+@keyframes mymove {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(250px);
+  }
+}
